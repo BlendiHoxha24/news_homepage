@@ -1,0 +1,212 @@
+:root{
+font-size: 15px;
+--buttonClr: #F15D51;
+---tittleclr: #00001B;
+--bodyClr: #FEFDF9;
+--paragaphClr: #7B787F;
+--navLinkClr: #7B787F;
+--sideContentTittleClr: #E7AB56;
+--sideContentBackgroundClr: #00001A;
+--sideBoxTitleClr: #FAFBFA;
+--smallBoxNumberClr: #C7C7C9;
+--smallBoxTitleClr: #020213;
+--buttonHoverClr: #00001A;
+--navLinkHoverClr: #E7AB56;
+--sideBoxTitleHoverClr: #E7AB56;
+--smallBoxTitleHoverClr: #E7AB56;
+--logoClr: #000018;
+
+}
+*{box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bodyClr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 6rem;
+}
+nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: var(--buttonClr); */
+    align-items: center;
+
+}
+#Links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--navLinkClr);
+    transition: ease 0.3s;
+}
+.nav-link:hover{
+    color: var(--navLinkHoverClr);
+}
+main{
+     width:100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 3rem;
+}
+#BigContent{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+
+}
+header{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+#HeaderImage{
+    grid-column: 1 / span 2;
+    /* background-color: var(--buttonClr); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+.image-box{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+#HeaderTitle{
+    grid-column: 1 /span 1;
+    grid-row: 2 / span 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+.title{
+font-size: 3rem;
+}
+#HeaderDescription{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+}
+.paragraph-style{
+    font-size: 0.9rem;
+    color: var(--paragaphClr);
+
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--buttonClr);
+    border: none;
+    color: var(--bodyClr);
+    transition: ease 0,3s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--buttonHoverClr);
+}
+#SideContent{
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    background-color: var(--sideContentBackgroundClr);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.subtitle{
+    color: var(--sideContentTittleClr);
+    font-size: 2rem;
+
+}
+.side-box{
+    width: 100%;
+    height: 100%;
+    /* padding: 0.2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom:1px solid var(--bodyClr);
+
+}
+.side-box-title{
+    transition: ease 0,3s;
+    color: var(--sideBoxTitleClr);
+
+}
+.side-box-title{
+    color: var(--sideBoxTitleHoverClr);
+}
+#SmallContent{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.small-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.small-box-image{
+    width: 50%;
+    height: 100%;
+}
+.small-box-description{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.small-box-number{
+    color: var(--smallBoxNumberClr);
+    font-size: 2rem;
+
+}
+.small-box-tittle{
+    color: var(--smallBoxTitleClr);
+    transition: ease 0,3s;
+
+}
+.small-box-tittle:hover{
+    color: var(--smallBoxTitleHoverClr);
+
+}
