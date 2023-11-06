@@ -1,5 +1,5 @@
 :root{
-font-size: 15px;
+
 --buttonClr: #F15D51;
 ---tittleclr: #00001B;
 --bodyClr: #FEFDF9;
@@ -23,15 +23,153 @@ font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
+/* for mobile phone */
+@media only screen and (min-width: 320px ) and (max-width: 480px){
+    :root{
+        font-size: 12pt;
+
+    }
+    body{
+        padding: 1rem;
+        padding-bottom: 15rem;
+        overflow: hidden;
+    }
+    #MobileLinks{
+        display: flex;
+    }
+    #HiddenLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-size: 1.5rem;
+        gap: 2rem;
+        width: 60%;
+        height: 100%;
+        position:fixed;
+        background-color: var(--bodyClr);
+        padding: 1rem;
+        top: 0;
+        right: 0;
+        transition: all ease 0.3s;
+        box-shadow: 0px 0px 30px black;
+    }
+    
+    .mobile-nav-link{
+        display: inline;
+    }
+    .nav-link{
+        display: none;
+    }
+    #BigContent{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    header{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #HeaderImage{
+        grid-column: 1 / span 1;
+    }
+    #HeaderTitle{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #HeaderDescription{
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    #SideContent{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #SmallContent{
+        height: 20rem;
+        flex-direction: column;
+    }
+    .small-box-image{
+        width: 7rem;
+    }
+}
+/* tablet
+@media only screen and (min-width: 481px ) and (max-width: 768px){
+    body{
+
+    }
+}
+/* sm llaptop */
+/* @media only screen and (min-width: 769px ) and (max-width: 1024px){ */
+    /* body{ */
+
+    /* } */
+/* } 
+/* big monitor */
+@media only screen and (min-width: 1025px ) {
+    :root{
+        font-size: 15pt;
+    }
+    .mobile-nav-link{
+        display: none;
+    }
+    .nav-link{
+        display: inline;
+    }
+  
+    #mobileLinks{
+        display: none;
+    }
+    body{
+        padding: 1rem 3rem;
+        padding-bottom: 15rem;
+    }
+   
+    #BigContent{
+        grid-template-columns:  2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    header{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #HeaderImage{
+        grid-column: 1 / span 2;
+    }
+    #HeaderTitle{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #HeaderDescription{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #SideContent{
+        grid-column: 2/ span 1;
+        grid-row: 1 / span 1;
+    }
+    #SmallContent{
+        height: 5rem;
+        flex-direction: row;
+        gap: 1rem ;
+    }
+    .small-box-image{
+        width: 10rem;
+    }
+    .small-box-number{
+        font-size: 1.2rem;
+    }
+
+}
+
+
 body{
     width: 100%;
     height: 100%;
-    background-color: var(--bodyClr);
+    /* background-color: var(--bodyClr); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 6rem;
+   
 }
 nav{
     width: 100%;
@@ -48,12 +186,12 @@ nav{
     flex-direction: row;
     gap: 2rem;
 }
-.nav-link{
+.link-style{
     text-decoration: none;
     color: var(--navLinkClr);
     transition: ease 0.3s;
 }
-.nav-link:hover{
+.link-style:hover{
     color: var(--navLinkHoverClr);
 }
 main{
@@ -68,8 +206,8 @@ main{
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
+    /* grid-template-columns: 2fr 1fr; */
+    /* grid-template-rows: 1fr; */
     gap: 2rem;
 
 }
@@ -77,12 +215,12 @@ header{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
     gap: 2rem;
 }
 #HeaderImage{
-    grid-column: 1 / span 2;
+    /* grid-column: 1 / span 2; */
     /* background-color: var(--buttonClr); */
     width: 100%;
     height: 100%;
@@ -95,8 +233,8 @@ header{
     object-fit: cover;
 }
 #HeaderTitle{
-    grid-column: 1 /span 1;
-    grid-row: 2 / span 1;
+    /* grid-column: 1 /span 1; */
+    /* grid-row: 2 / span 1; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -106,8 +244,8 @@ header{
 font-size: 3rem;
 }
 #HeaderDescription{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    /* grid-column: 2 / span 1; */
+    /* grid-row: 2 / span 1; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -119,7 +257,8 @@ font-size: 3rem;
     color: var(--paragaphClr);
 
 }
-button{
+
+.main-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,14 +270,14 @@ button{
     transition: ease 0,3s;
     cursor: pointer;
 }
-button:hover{
+.main-button:hover{
     background-color: var(--buttonHoverClr);
 }
 #SideContent{
     width: 100%;
     height: 100%;
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
+    /* grid-column: 2 / span 1; */
+    /* grid-row: 1 / span 1; */
     background-color: var(--sideContentBackgroundClr);
     padding: 1rem;
     display: flex;
@@ -171,7 +310,7 @@ button:hover{
 }
 #SmallContent{
     width: 100%;
-    height: 10rem;
+    /* height: 10rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,17 +318,17 @@ button:hover{
 }
 .small-box{
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    /* justify-content: space-between; */
+    /* gap: 1rem; */
     width: 100%;
     height: 100%;
 }
 .small-box-image{
-    width: 50%;
+    /* width: 50%; */
     height: 100%;
 }
 .small-box-description{
-    width: 15%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -198,7 +337,7 @@ button:hover{
 }
 .small-box-number{
     color: var(--smallBoxNumberClr);
-    font-size: 2rem;
+    /* font-size: 2rem; */
 
 }
 .small-box-tittle{
@@ -208,5 +347,19 @@ button:hover{
 }
 .small-box-tittle:hover{
     color: var(--smallBoxTitleHoverClr);
+
+}
+.menu-button-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 3trm;
+    height: 3rem; */
+    font-size: 2rem;
+}
+.hide{
+    opacity: 0;
+    display: none;
+    z-index: -10;
 
 }
